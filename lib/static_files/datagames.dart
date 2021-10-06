@@ -1,0 +1,55 @@
+class DataGames {
+  static List<Categoy<String, String>> categories = [
+    Categoy("2D", "2d.png"),
+    Categoy("3D", "3d.png"),
+    Categoy("Action RPG", "action-rpg.png"),
+    Categoy("Action", "action.png"),
+    Categoy("Anime", "anime.png"),
+    Categoy("Battle Royale", "battle-royale.png"),
+    Categoy("Cards", "card.png"),
+    Categoy("Fantasy", "fantasy.png"),
+    Categoy("Fighting", "fighting.png"),
+    Categoy("First Person", "first-person.png"),
+    Categoy("Flight", "flight.png"),
+    Categoy("Horror", "horror.png"),
+    Categoy("Low Spec", "low-spec.png"),
+    Categoy("Martial Arts", "martial-arts.png"),
+    Categoy("Military", "military.png"),
+    Categoy("MMO", "mmo.png"),
+    Categoy("MMOFPS", "mmofps.png"),
+    Categoy("MMORPG", "mmorpg.png"),
+    Categoy("MMORTS", "mmorts.png"),
+    Categoy("MMOTPS", "mmotps.png"),
+    Categoy("MOBA", "moba.png"),
+    Categoy("OPEN WORLD", "open-world.png"),
+    Categoy("PERMADEATH", "permadeath.png"),
+    Categoy("Pixel", "pixel.png"),
+    Categoy("PVE", "pve.png"),
+    Categoy("PVP", "pvp.png"),
+    Categoy("Racing", "racing.png"),
+    Categoy("Sailing", "sailing.png"),
+    Categoy("SanBox", "sandbox.png"),
+    Categoy("Sci Fi", "sci-fi.png"),
+    Categoy("Shotter", "shotter.png"),
+    Categoy("Side Scroller", "side-scroller.png"),
+    Categoy("Social", "social.png"),
+    Categoy("Space", "space.png"),
+    Categoy("Sport", "sport.png"),
+    Categoy("Strategy", "strategy.png"),
+    Categoy("SuperHero", "superhero.png"),
+    Categoy("Survival", "survival.png"),
+    Categoy("Tank", "tank.png"),
+    Categoy("Third Person", "third-person.png"),
+    Categoy("Top Down", "top-down.png"),
+    Categoy("Tower Defense", "tower-defense.png"),
+    Categoy("Turn Based", "turn-based.png"),
+    Categoy("Voxel", "voxel.png"),
+    Categoy("Zombie", "zombie.png"),
+  ];
+}
+
+class Categoy<T1, T2> {
+  final T1 text;
+  final T2 img;
+  Categoy(this.text, this.img);
+}
