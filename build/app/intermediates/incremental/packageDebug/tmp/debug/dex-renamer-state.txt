@@ -1,0 +1,4 @@
+#Sat Oct 02 21:25:16 CDT 2021
+base.0=/Users/jorge/Documents/GitHub/freegames/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
