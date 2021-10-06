@@ -11,8 +11,6 @@ class Videogames {
       }
       return lista;
     }).catchError((e) {});
-    print('hola');
-    print(lista);
 
     return lista;
   }
