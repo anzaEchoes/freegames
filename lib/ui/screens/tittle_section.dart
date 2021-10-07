@@ -9,6 +9,7 @@ class TittleSection extends ConsumerWidget {
   Widget build(BuildContext context, ScopedReader watch) {
     return Container(
         height: 70,
+        padding: EdgeInsets.only(bottom: 10),
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -23,6 +24,7 @@ class TittleSection extends ConsumerWidget {
           children: [
             Positioned(
               left: 0,
+              bottom: -15,
               child: Row(
                 children: [
                   Container(

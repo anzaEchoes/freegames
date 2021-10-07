@@ -23,13 +23,15 @@ class _HomePageState extends State<HomePage> {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
+          appBar: AppBar(
+            flexibleSpace: TittleSection(),
+          ),
           backgroundColor: Colors.black,
           body: SingleChildScrollView(
               physics: const ClampingScrollPhysics(),
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  TittleSection(),
                   CategoriesSection(),
                   FiltersContainer(),
                   ListGames(),

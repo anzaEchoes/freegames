@@ -5,7 +5,7 @@ class Videogames {
   Future<List<VideoGame>> videogameslist(String filtro) async {
     List<VideoGame> lista = [];
 
-    await VideogameApi.httpGet('').then((json) {
+    await VideogameApi.httpGet(filtro).then((json) {
       for (var item in json) {
         lista.add(VideoGame.fromJson(item));
       }

@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		olLFJDt9PvHEh7kO2hxlyCYAlxI=
+		sp94HwdUNRH8X7bt7zUcA04Ppp0=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		An4RLuMp08yKfbKMyzhepXO/jTw=
+		jxWBZD/04iJzl9evXFJqHg8wwcQ=
 		</data>
 		<key>flutter_assets/assets/categories/2d.png</key>
 		<data>
@@ -140,7 +140,7 @@
 		<data>
 		A+SY0vQ1+XFE9l7zYHUw8K5NWVE=
 		</data>
-		<key>flutter_assets/assets/categories/shotter.png</key>
+		<key>flutter_assets/assets/categories/shooter.png</key>
 		<data>
 		gKa1x7wW8MMCE7UpY99+rrpH5Lo=
 		</data>
@@ -157,6 +157,10 @@
 		4OLdrzm+FKkUM7d0MUv41HdldXs=
 		</data>
 		<key>flutter_assets/assets/categories/sport.png</key>
+		<data>
+		KW/kHbio6Ie9ZHSs4EEFjsE2V8I=
+		</data>
+		<key>flutter_assets/assets/categories/sports.png</key>
 		<data>
 		KW/kHbio6Ie9ZHSs4EEFjsE2V8I=
 		</data>
@@ -250,7 +254,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		LsBTSsm6ZlvOD0i6UNen7acC9Fo=
+		TvKot61r/AmwBr1qWfTvmPsaF9M=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -267,11 +271,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			olLFJDt9PvHEh7kO2hxlyCYAlxI=
+			sp94HwdUNRH8X7bt7zUcA04Ppp0=
 			</data>
 			<key>hash2</key>
 			<data>
-			iGJSReAVcPDPlYsrA2vR3+6SboIuRzHRe1v46oxjUWo=
+			EyiQOOGb+pPJjmoCbZcE0jqskfkYYSBARQE9+AuL7ps=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -289,11 +293,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			An4RLuMp08yKfbKMyzhepXO/jTw=
+			jxWBZD/04iJzl9evXFJqHg8wwcQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			WE7SXcbSjr7jwnNlQyj05bRywZG8OoDIAzzJrYIZ0QA=
+			iFpI46o3C24uAV132Pd4kjoMoTmChKqQHARV4B2c1N0=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/categories/2d.png</key>
@@ -626,7 +630,7 @@
 			mUJPcDB2Yf3+sgnPMHjjYcJq5fiLZZT7/Hp8v2r1zUI=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/categories/shotter.png</key>
+		<key>flutter_assets/assets/categories/shooter.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -671,6 +675,17 @@
 			</data>
 		</dict>
 		<key>flutter_assets/assets/categories/sport.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KW/kHbio6Ie9ZHSs4EEFjsE2V8I=
+			</data>
+			<key>hash2</key>
+			<data>
+			HzIKK4O+o3QyFI6o8HgaA7Vz1TXtJRoBchaU4sTacH0=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/categories/sports.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -927,11 +942,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LsBTSsm6ZlvOD0i6UNen7acC9Fo=
+			TvKot61r/AmwBr1qWfTvmPsaF9M=
 			</data>
 			<key>hash2</key>
 			<data>
-			DofgD82FRRkeh3SkUidAaN/yQ0Vo/I3QG4zoGvO5yHI=
+			jsepjydUyO+S2XDgCTo1oWQ2EaQ5Cdy8JUrDw+r0S4o=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

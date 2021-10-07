@@ -14,36 +14,37 @@ class FiltersContainer extends ConsumerWidget {
       final sort = watch(sortProvider).state;
 
       return Container(
+        height: 80,
         width: MediaQuery.of(context).size.width,
         color: Colors.black,
-        child: Column(
-          children: [
-            Padding(
-                padding: const EdgeInsets.all(10),
-                child: Text('Filter Games by multiple tags ',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.getFont('Anton',
-                        textStyle: Theme.of(context).textTheme.headline4,
-                        fontSize: 15,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: 3,
-                        shadows: [
-                          const Shadow(
-                              // bottomLeft
-                              offset: Offset(-1.5, -1.5),
-                              color: Colors.black),
-                          const Shadow(
-                              // bottomRight
-                              offset: Offset(1.5, -1.5),
-                              color: Colors.black),
-                        ]))),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text('Filter Games',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.getFont('Anton',
+                          textStyle: Theme.of(context).textTheme.headline4,
+                          fontSize: 15,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: 3,
+                          shadows: [
+                            const Shadow(
+                                // bottomLeft
+                                offset: Offset(-1.5, -1.5),
+                                color: Colors.black),
+                            const Shadow(
+                                // bottomRight
+                                offset: Offset(1.5, -1.5),
+                                color: Colors.black),
+                          ]))),
+              Row(
                 children: [
                   Container(
-                    margin: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+                    margin: const EdgeInsets.fromLTRB(40, 0, 0, 0),
                     child: DropdownButton<String>(
                       elevation: 0,
                       underline: SizedBox(),
@@ -73,7 +74,7 @@ class FiltersContainer extends ConsumerWidget {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+                    margin: const EdgeInsets.fromLTRB(40, 0, 0, 0),
                     child: DropdownButton<String>(
                       elevation: 0,
                       underline: SizedBox(),
@@ -105,8 +106,8 @@ class FiltersContainer extends ConsumerWidget {
                   ),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       );
     });
