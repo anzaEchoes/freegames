@@ -14,7 +14,7 @@ class FiltersContainer extends ConsumerWidget {
       final sort = watch(sortProvider).state;
 
       return Container(
-        height: 80,
+        height: 60,
         width: MediaQuery.of(context).size.width,
         color: Colors.black,
         child: SingleChildScrollView(
@@ -23,7 +23,7 @@ class FiltersContainer extends ConsumerWidget {
             children: [
               Padding(
                   padding: const EdgeInsets.all(10),
-                  child: Text('Filter Games',
+                  child: Text('Filters',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont('Anton',
                           textStyle: Theme.of(context).textTheme.headline4,
@@ -69,6 +69,7 @@ class FiltersContainer extends ConsumerWidget {
                         );
                       }).toList(),
                       onChanged: (value) {
+                        resetCtrl();
                         context.read(platformProvider).state = value.toString();
                       },
                     ),
@@ -100,6 +101,7 @@ class FiltersContainer extends ConsumerWidget {
                         );
                       }).toList(),
                       onChanged: (value) {
+                        resetCtrl();
                         context.read(sortProvider).state = value.toString();
                       },
                     ),

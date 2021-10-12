@@ -1,6 +1,9 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:freegames/ui/screens/about_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class TittleSection extends ConsumerWidget {
   const TittleSection({Key? key}) : super(key: key);
@@ -72,6 +75,25 @@ class TittleSection extends ConsumerWidget {
                 ],
               ),
             ),
+            Positioned(
+                top: 20,
+                right: 20,
+                child: GestureDetector(
+                  child: Icon(
+                    Icons.info,
+                    size: 40,
+                    color: Colors.white.withOpacity(0.5),
+                  ),
+                  onTap: () {
+                    showCupertinoModalBottomSheet(
+                      backgroundColor: Color(0x00000000),
+                      context: context,
+                      builder: (context) => FadeInUp(
+                          duration: const Duration(milliseconds: 500),
+                          child: AboutPage()),
+                    );
+                  },
+                ))
           ],
         ));
   }

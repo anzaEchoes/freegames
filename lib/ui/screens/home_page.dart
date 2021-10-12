@@ -12,8 +12,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  ScrollController _controller = ScrollController();
+
   @override
   void initState() {
+    _controller = ScrollController();
     super.initState();
   }
 
@@ -23,24 +26,20 @@ class _HomePageState extends State<HomePage> {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          appBar: AppBar(
-            flexibleSpace: TittleSection(),
-          ),
           backgroundColor: Colors.black,
-          body: SingleChildScrollView(
-              physics: const ClampingScrollPhysics(),
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: [
+          body: ListView(
+            physics: const NeverScrollableScrollPhysics(),
+            children: [
+              Column(
+                children: const [
+                  TittleSection(),
                   CategoriesSection(),
                   FiltersContainer(),
-                  ListGames(),
-                  Container(
-                    color: Colors.black87,
-                    height: 50,
-                  )
                 ],
-              )),
+              ),
+              ListGames(),
+            ],
+          ),
         ),
       ),
     );

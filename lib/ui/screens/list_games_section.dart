@@ -15,15 +15,19 @@ class ListGames extends ConsumerWidget {
     final platform = watch(platformProvider).state;
     final sort = watch(sortProvider).state;
 
-    v = await vd
-        .videogameslist("?platform=$platform&category=$category&sort-by=$sort");
+    try {
+      v = await vd.videogameslist(
+          "?platform=$platform&category=$category&sort-by=$sort");
+    } catch (e) {
+      return [];
+    }
     return v;
   }
 
   @override
   Widget build(BuildContext context, ScopedReader watch) {
     return Consumer(builder: (context, watch, _) {
-      return Container(
+      return SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 0.9,
         child: SingleChildScrollView(
@@ -34,7 +38,7 @@ class ListGames extends ConsumerWidget {
                 AsyncSnapshot<List<VideoGame>> snapshot) {
               List<Widget> children;
               if (snapshot.hasData) {
-                return ListGameView(vieogames: v);
+                return listGames(v, context);
               } else if (snapshot.hasError) {
                 return Column(children: [
                   const Icon(
@@ -49,7 +53,10 @@ class ListGames extends ConsumerWidget {
                 ]);
               } else {
                 return Column(children: const [
-                  CircularProgressIndicator(),
+                  SizedBox(
+                      height: 50,
+                      width: 50,
+                      child: CircularProgressIndicator()),
                   Padding(
                     padding: EdgeInsets.only(top: 16),
                     child: Text('Awaiting result...'),
@@ -61,5 +68,17 @@ class ListGames extends ConsumerWidget {
         ),
       );
     });
+  }
+
+  listGames(List<VideoGame> v, context) {
+    if (v.length == 0) {
+      return const Center(
+          child: Text(
+        'Empty',
+        style: TextStyle(color: Colors.white),
+      ));
+    } else {
+      return ListGameView(vieogames: v);
+    }
   }
 }

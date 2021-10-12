@@ -12,23 +12,19 @@ class CategoriesSection extends ConsumerWidget {
   Widget build(BuildContext context, ScopedReader watch) {
     return Consumer(builder: (context, watch, _) {
       final cols = watch(sectionCategoriesColProvider).state;
-      final tag = watch(taglProvider).state;
-      print(tag);
 
       return Container(
+        padding: EdgeInsets.all(2),
         decoration: const BoxDecoration(
             gradient: LinearGradient(
           colors: [
-            Color.fromRGBO(0, 0, 0, 1),
-            Color.fromRGBO(4, 104, 191, 1),
-            Colors.blue,
+            Colors.black,
             Color.fromRGBO(0, 0, 0, 1),
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         )),
-        height: cols * 200,
-        width: MediaQuery.of(context).size.width,
+        height: cols == 0 ? 50 : cols * 210,
         child: Stack(
           children: [
             Align(
@@ -73,6 +69,7 @@ class CategoriesSection extends ConsumerWidget {
                           .toString(),
                       style: const TextStyle(fontSize: 10, color: Colors.black),
                       items: <String>[
+                        '0',
                         '1',
                         '2',
                         '4',
@@ -98,26 +95,35 @@ class CategoriesSection extends ConsumerWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 50.0),
-              child: Consumer(builder: (context, watch, _) {
-                return GridView.count(
-                  scrollDirection: Axis.horizontal,
-                  physics: const BouncingScrollPhysics(),
-                  // Create a grid with 2 columns. If you change the scrollDirection to
-                  // horizontal, this produces 2 rows.
-                  crossAxisCount: cols,
-                  // Generate 100 widgets that display their index in the List.
-                  children: List.generate(DataGames.categories.length, (index) {
-                    return GestureDetector(
-                        onTap: () => context.read(taglProvider).state =
-                            regex(DataGames.categories[index].img),
-                        child: CategoryItem(
-                            category: DataGames.categories[index]));
-                  }),
-                );
-              }),
-            ),
+            cols == 0
+                ? Container()
+                : Padding(
+                    padding: const EdgeInsets.only(top: 50.0),
+                    child: Consumer(builder: (context, watch, _) {
+                      return GridView.count(
+                        scrollDirection: Axis.horizontal,
+                        physics: const BouncingScrollPhysics(),
+                        // Create a grid with 2 columns. If you change the scrollDirection to
+                        // horizontal, this produces 2 rows.
+                        crossAxisCount: cols,
+                        // Generate 100 widgets that display their index in the List.
+                        children:
+                            List.generate(DataGames.categories.length, (index) {
+                          return GestureDetector(
+                              onTap: () => {
+                                    resetCtrl(),
+                                    context
+                                        .read(sectionCategoriesColProvider)
+                                        .state = 1,
+                                    context.read(taglProvider).state =
+                                        regex(DataGames.categories[index].img),
+                                  },
+                              child: CategoryItem(
+                                  category: DataGames.categories[index]));
+                        }),
+                      );
+                    }),
+                  ),
           ],
         ),
       );
@@ -126,7 +132,6 @@ class CategoriesSection extends ConsumerWidget {
 
   String regex(String text) {
     int index = text.indexOf('.');
-    print(index);
     if (index == -1) {
       return 'shotter';
     }

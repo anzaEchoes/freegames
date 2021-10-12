@@ -16,7 +16,6 @@ class VideogameApi {
   }
 
   static Future httpGet(String path) async {
-    print('path ' + path);
     try {
       final resp = await _dio.get(path);
 
