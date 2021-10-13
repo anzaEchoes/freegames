@@ -8,69 +8,69 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-          height: MediaQuery.of(context).size.height * 0.8,
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-            colors: [
-              Color(0x00000000),
-              Colors.black,
-              Colors.black,
-              Colors.black,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          )),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Align(
-                  alignment: Alignment.topRight,
-                  child: GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Icon(
-                        Icons.close,
-                        color: Colors.white,
-                        size: 50,
-                      )),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                TittleHeader(
-                  tittle: 'App Design',
-                  fontsSize: 40,
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(20, 30, 20, 40),
-                  child: appdesigner(),
-                ),
-                TittleHeader(
-                  tittle: 'Technology App',
-                  fontsSize: 40,
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(20, 30, 20, 40),
-                  child: technology(),
-                ),
-                TittleHeader(
-                  tittle: 'Data Provider',
-                  fontsSize: 40,
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(20, 30, 20, 40),
-                  child: providerData(),
-                ),
+    return Material(
+        color: Color(0x00000000),
+        child: Container(
+            height: MediaQuery.of(context).size.height * 0.8,
+            decoration: const BoxDecoration(
+                gradient: LinearGradient(
+              colors: [
+                Color(0x00000000),
+                Colors.black,
+                Colors.black,
+                Colors.black,
               ],
-            ),
-          )),
-    );
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            )),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.close,
+                          color: Colors.white,
+                          size: 50,
+                        )),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  TittleHeader(
+                    tittle: 'App Design',
+                    fontsSize: 40,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 30, 20, 40),
+                    child: appdesigner(),
+                  ),
+                  TittleHeader(
+                    tittle: 'Technology App',
+                    fontsSize: 40,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 30, 20, 40),
+                    child: technology(),
+                  ),
+                  TittleHeader(
+                    tittle: 'Data Provider',
+                    fontsSize: 40,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 30, 20, 40),
+                    child: providerData(),
+                  ),
+                ],
+              ),
+            )));
   }
 
   appdesigner() {

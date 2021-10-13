@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freegames/api/VideogameApi.dart';
 import 'package:freegames/ui/screens/home_page.dart';
+import 'package:freegames/ui/screens/intro/intro_page.dart';
 
 void main() {
   VideogameApi.configureDio();
@@ -17,6 +18,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const HomePage();
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Loading());
   }
 }
